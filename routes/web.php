@@ -16,12 +16,9 @@ use Inertia\Inertia;
 //Route::get('/', [HomeController::class, 'index'])->name('home');
 // Page d'accueil
 Route::get('/', function () {
-    return Inertia::render('welcome', [
+    return Inertia::render('Welcome', [
         'canLogin'       => Route::has('login'),
         'canRegister'    => Route::has('register'),
-        'appName'        => config('app.name'),
-        'appVersion'     => config('app.version'),
-        'appDescription' => config('app.description'),
     ]);
 })->name('home'); // <--- change ici 'welcome' en 'home'
 
