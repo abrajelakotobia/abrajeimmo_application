@@ -16,11 +16,11 @@ use Inertia\Inertia;
 //Route::get('/', [HomeController::class, 'index'])->name('home');
 // Page d'accueil
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
+    return Inertia::render('welcome', [
         'canLogin'       => Route::has('login'),
         'canRegister'    => Route::has('register'),
     ]);
-})->name('home'); // <--- change ici 'welcome' en 'home'
+})->name('welcome'); // <--- change ici 'welcome' en 'home'
 
 // Authenticated Routes
 Route::middleware(['auth', 'verified'])->group(function () {
