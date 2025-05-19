@@ -46,7 +46,7 @@ class PostsController extends Controller
     }
 
 
-    public function store(Request $request)
+   public function store(Request $request)
     {
         // Vérification de l'authentification
         if (!Auth::check()) {
@@ -103,7 +103,7 @@ class PostsController extends Controller
             }
 
             // Redirection vers le dashboard avec message de succès
-           return Inertia::render('dashboard')
+            return redirect()->route('dashboard')
                 ->with('success', 'Votre annonce a été publiée avec succès!');
 
         } catch (\Exception $e) {
