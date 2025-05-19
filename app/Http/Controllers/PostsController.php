@@ -103,7 +103,7 @@ class PostsController extends Controller
             }
 
             // Redirection vers le dashboard avec message de succès
-           return Inertia::render('dashboard');
+           return Inertia::render('dashboard')
                 ->with('success', 'Votre annonce a été publiée avec succès!');
 
         } catch (\Exception $e) {
