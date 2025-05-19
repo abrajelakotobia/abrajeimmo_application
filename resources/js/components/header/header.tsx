@@ -85,7 +85,7 @@ export default function Header() {
               {auth.user ? (
                 <>
                   <Link
-                    href="/post/create"
+                    href="/posts/create"
                     className="hidden sm:flex items-center bg-rose-500 hover:bg-rose-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2"
                   >
                     <PlusSquare className="w-4 h-4 mr-2" />
@@ -119,8 +119,8 @@ export default function Header() {
                     onClick={openRegister}
                     className="hidden sm:flex items-center bg-rose-500 hover:bg-rose-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2"
                   >
-                    <PlusSquare className="w-4 h-4 mr-2" />
-                    Publier une annonce
+                   
+                    Register
                   </button>
                 </>
               )}
