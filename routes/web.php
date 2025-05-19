@@ -13,14 +13,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 // Public Routes
-//Route::get('/', [HomeController::class, 'index'])->name('home');
-// Page d'accueil
-Route::get('/', function () {
-    return Inertia::render('welcome', [
-        'canLogin'       => Route::has('login'),
-        'canRegister'    => Route::has('register'),
-    ]);
-})->name('welcome'); // <--- change ici 'welcome' en 'home'
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Authenticated Routes
 Route::middleware(['auth', 'verified'])->group(function () {
